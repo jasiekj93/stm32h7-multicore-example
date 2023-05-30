@@ -5,7 +5,7 @@
 
 # Platform
 # Uncomment if program platform must be diffrent than the solution
-override PLATFORM := ArmM4
+PLATFORM := ArmM4
 
 # Target
 target := cm4

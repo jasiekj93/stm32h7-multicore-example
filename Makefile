@@ -23,11 +23,16 @@ external_build_options = \
 
 # Project internal libraries
 internal_library_names = \
-driver-cm4
+driver-cm4 \
+driver-cm7 \
+application-cm4 \
+application-cm7 \
+hardware \
 
 # Project subprograms
 program_names = \
-cm4
+cm4 \
+cm7 \
 
 # Project libraries
 library_names = \
@@ -38,5 +43,6 @@ include $(make_dir)/Main.mk
 # Enter the internal library dependencies (by directory name)
 # 	E.g.: if libproject-a depends on libproject-b write the line above:
 #	libproject-a: libproject-b
+libh7-application-cm7: libh7-hardware
 
 # Custom targets
