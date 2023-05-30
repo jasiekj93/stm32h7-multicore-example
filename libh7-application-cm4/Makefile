@@ -28,6 +28,7 @@ cxx_defs := \
 
 # internal libraries
 export required_libraries = \
+hardware-cm4 \
 
 # external libraries
 #	e.g. if include flag is '-I$(external_dir)/libFoo'

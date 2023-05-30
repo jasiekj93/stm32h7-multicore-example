@@ -42,7 +42,7 @@
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-
+extern void (*sevCallback)(void);
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/

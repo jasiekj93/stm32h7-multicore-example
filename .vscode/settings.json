@@ -4,6 +4,7 @@
         "*.roff": "troff",
         "main.h": "c",
         "stm32h7xx_hal.h": "c",
-        "stm32h7xx_it.h": "c"
+        "stm32h7xx_it.h": "c",
+        "usart.h": "c"
     }
 }

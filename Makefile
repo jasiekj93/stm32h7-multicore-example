@@ -28,6 +28,7 @@ driver-cm7 \
 application-cm4 \
 application-cm7 \
 hardware \
+hardware-cm4 \
 
 # Project subprograms
 program_names = \
@@ -44,5 +45,6 @@ include $(make_dir)/Main.mk
 # 	E.g.: if libproject-a depends on libproject-b write the line above:
 #	libproject-a: libproject-b
 libh7-application-cm7: libh7-hardware
+libh7-application-cm4: libh7-hardware-cm4
 
 # Custom targets

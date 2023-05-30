@@ -28,7 +28,9 @@ cxx_defs := \
 
 # internal libraries
 required_internal_libraries = \
-driver-cm4
+hardware-cm4 \
+driver-cm4 \
+application-cm4 \
 
 # libraries
 required_libraries = \

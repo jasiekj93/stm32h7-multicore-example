@@ -10,7 +10,7 @@ Task::Task()
 
 }
 
-void execute()
+void Task::execute()
 {
     static constexpr auto DELAY_TIME = 500U;
 

@@ -14,8 +14,8 @@ using namespace h7;
 int main(int argc, char* argv[])
 {
     driver::cm7::init();
-    auto led = driver::cm7::LedImpl();
-    auto system = driver::cm7::SystemImpl();
+    driver::cm7::LedImpl led;
+    driver::cm7::SystemImpl system;
 
     application::cm7::Task().execute();
 

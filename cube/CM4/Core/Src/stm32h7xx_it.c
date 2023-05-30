@@ -57,7 +57,7 @@
 /* External variables --------------------------------------------------------*/
 
 /* USER CODE BEGIN EV */
-
+void (*sevCallback)(void) = NULL;
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -204,7 +204,10 @@ void SysTick_Handler(void)
 void CM7_SEV_IRQHandler(void)
 {
   /* USER CODE BEGIN CM7_SEV_IRQn 0 */
-
+    if(sevCallback != NULL)
+        sevCallback();
+    else
+        Error_Handler();
   /* USER CODE END CM7_SEV_IRQn 0 */
   /* USER CODE BEGIN CM7_SEV_IRQn 1 */
 
@@ -214,4 +217,3 @@ void CM7_SEV_IRQHandler(void)
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */
-
