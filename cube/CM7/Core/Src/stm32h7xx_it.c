@@ -46,7 +46,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
-
+void (*sevHandler)(void) = NULL;
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -197,19 +197,6 @@ void SysTick_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32h7xx.s).                    */
 /******************************************************************************/
-
-/**
-  * @brief This function handles CM4 send event interrupt for CM7.
-  */
-void CM4_SEV_IRQHandler(void)
-{
-  /* USER CODE BEGIN CM4_SEV_IRQn 0 */
-
-  /* USER CODE END CM4_SEV_IRQn 0 */
-  /* USER CODE BEGIN CM4_SEV_IRQn 1 */
-
-  /* USER CODE END CM4_SEV_IRQn 1 */
-}
 
 /* USER CODE BEGIN 1 */
 

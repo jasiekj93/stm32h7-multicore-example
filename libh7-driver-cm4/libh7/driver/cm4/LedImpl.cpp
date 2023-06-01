@@ -5,8 +5,8 @@
 using namespace h7::driver;
 using namespace h7::driver::cm4;
 
-static GPIO_TypeDef * ports[] = { LD1_GPIO_Port, LD2_GPIO_Port, LD3_GPIO_Port };
-static uint16_t pins[] = { LD1_Pin, LD2_Pin, LD3_Pin };
+static GPIO_TypeDef * ports[] = { LD1_GPIO_Port, LD2_GPIO_Port };
+static uint16_t pins[] = { LD1_Pin, LD2_Pin };
 
 LedImpl::LedImpl()
 {

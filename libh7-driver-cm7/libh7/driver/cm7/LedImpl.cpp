@@ -14,14 +14,24 @@ LedImpl::LedImpl()
 
 void LedImpl::turnOn(Color color)
 {
-    sharedPointer->action = true;
-    sharedPointer->color = (unsigned)color;
-    __SEV();
+    if(color == Color::YELLOW)
+    {
+        // sharedPointer->action = true;
+        // sharedPointer->color = (unsigned)color;
+        __SEV();
+    }
+    else
+        HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_SET);
 }
 
 void LedImpl::turnOff(Color color)
 {
-    sharedPointer->action = true;
-    sharedPointer->color = (unsigned)color;
-    __SEV();
+    if(color == Color::YELLOW)
+    {
+        sharedPointer->action = false;
+        // sharedPointer->color = (unsigned)color;
+        __SEV();
+    }
+    else
+        HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, GPIO_PIN_RESET);
 }

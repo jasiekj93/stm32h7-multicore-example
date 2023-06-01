@@ -16,6 +16,7 @@ namespace h7::driver::cm4
 		SystemImpl();
 
         void delay(unsigned ms) override;
+        void sleep() override;
 
 	};
 }

@@ -13,7 +13,6 @@ namespace h7::hardware::cm4
 	public:
         enum class Color
         {
-            RED,
             GREEN,
             YELLOW
         };

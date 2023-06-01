@@ -14,7 +14,6 @@ namespace h7::hardware
         enum class Color
         {
             RED,
-            GREEN,
             YELLOW
         };
 

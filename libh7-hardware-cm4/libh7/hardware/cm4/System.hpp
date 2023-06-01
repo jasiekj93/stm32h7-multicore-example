@@ -14,6 +14,7 @@ namespace h7::hardware::cm4
 		virtual ~System() {}
 
         virtual void delay(unsigned ms) = 0;
+        virtual void sleep() = 0;
 
 		static System* getInstance();
 

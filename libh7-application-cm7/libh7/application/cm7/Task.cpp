@@ -22,8 +22,8 @@ void Task::execute()
         led->turnOn(hardware::Led::Color::RED);
         system->delay(DELAY_TIME);
 
-        led->turnOn(hardware::Led::Color::GREEN);
-        system->delay(DELAY_TIME);
+        // led->turnOn(hardware::Led::Color::GREEN);
+        // system->delay(DELAY_TIME);
 
         led->turnOn(hardware::Led::Color::YELLOW);
         system->delay(DELAY_TIME);
@@ -31,8 +31,8 @@ void Task::execute()
         led->turnOff(hardware::Led::Color::RED);
         system->delay(DELAY_TIME);
 
-        led->turnOff(hardware::Led::Color::GREEN);
-        system->delay(DELAY_TIME);
+        // led->turnOff(hardware::Led::Color::GREEN);
+        // system->delay(DELAY_TIME);
 
         led->turnOff(hardware::Led::Color::YELLOW);
         system->delay(DELAY_TIME);

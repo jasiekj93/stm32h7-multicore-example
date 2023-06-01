@@ -1,0 +1,51 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CM7 - first",
+            "cwd": "${workspaceRoot}",
+            "executable": "./bin/ArmM7/debug/cm7.elf",
+            "request": "attach",
+            "type": "cortex-debug",
+            "servertype": "jlink",
+            "device": "STM32H755ZI_M7",
+            "runToEntryPoint": "main",
+            "interface": "jtag",
+            // "numberOfProcessors": 2,
+            // "targetProcessor": 0,
+            // "targetId": "0x06450041",
+            // "svdFile": "./libhsm-driver/Cube/STM32L4R9.svd",
+            // "serialNumber": "504504273",
+            // "preLaunchTask": "buildhsm"
+        },
+        {
+            "name": "CM4 - second",
+            "cwd": "${workspaceRoot}",
+            "executable": "./bin/ArmM4/debug/cm4.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "jlink",
+            "device": "STM32H755ZI_M4",
+            "runToEntryPoint": "main",
+            "interface": "jtag",
+            // "numberOfProcessors": 2,
+            // "targetProcessor": 1,
+            // "targetId": "0x6BA00477"
+            // "svdFile": "./libhsm-driver/Cube/STM32L4R9.svd",
+            // "serialNumber": "504504273",
+            // "preLaunchTask": "buildhsm"
+        },
+
+    ],
+    "compounds": [
+        {
+          "name": "CM7/CM4",
+          "configurations": [ "CM4 - second", "CM7 - first" ],
+          "stopAll": true
+        }
+      ]
+
+}
