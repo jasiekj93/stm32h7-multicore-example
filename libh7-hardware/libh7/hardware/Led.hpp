@@ -13,8 +13,9 @@ namespace h7::hardware
 	public:
         enum class Color
         {
-            RED,
-            YELLOW
+            GREEN,
+            YELLOW,
+            RED
         };
 
 		virtual ~Led() {}

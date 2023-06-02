@@ -13,24 +13,27 @@ Task::Task()
 
 void Task::execute()
 {
+    auto handler = hardware::cm4::SevHandler::getInstance();
     auto system = hardware::cm4::System::getInstance();
 
     while (true)
     {
-        toggleGreen();
-        system->delay(500);
+        auto request = handler->getRequest();
+        processRequest(request);
+        system->delay(1);
     }
 }
 
-static void toggleGreen()
+void Task::processRequest(hardware::cm4::Request* request)
 {
-    static bool status = true;
-    auto led = h7::hardware::cm4::Led::getInstance();
+    if(request == nullptr)
+        return;
 
-    if(status)
-        led->turnOn(h7::hardware::cm4::Led::Color::GREEN);
+    auto led = hardware::cm4::Led::getInstance();
+    auto color = (hardware::cm4::Led::Color)request->color;
+
+    if(request->action == true)     
+        led->turnOn(color);        
     else
-        led->turnOff(h7::hardware::cm4::Led::Color::GREEN);
-        
-    status = !status;
+        led->turnOff(color);        
 }

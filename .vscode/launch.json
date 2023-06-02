@@ -8,7 +8,7 @@
             "name": "CM7 - first",
             "cwd": "${workspaceRoot}",
             "executable": "./bin/ArmM7/debug/cm7.elf",
-            "request": "attach",
+            "request": "launch",
             "type": "cortex-debug",
             "servertype": "jlink",
             "device": "STM32H755ZI_M7",

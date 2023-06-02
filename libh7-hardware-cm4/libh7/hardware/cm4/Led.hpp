@@ -14,7 +14,8 @@ namespace h7::hardware::cm4
         enum class Color
         {
             GREEN,
-            YELLOW
+            YELLOW,
+            RED
         };
 
 		virtual ~Led() {}
