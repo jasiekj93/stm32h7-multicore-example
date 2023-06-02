@@ -1,6 +1,7 @@
 #include "Init.hpp"
 #include <main.h>
 #include <gpio.h>
+#include <stm32h7xx_hal_msp.h>
 
 #ifndef HSEM_ID_0
 #define HSEM_ID_0 (0U) /* HW semaphore 0*/
@@ -30,5 +31,5 @@ void h7::driver::cm4::init()
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  __WFE();
+  HAL_MspInit();
 }

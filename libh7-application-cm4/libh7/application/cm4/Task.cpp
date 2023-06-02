@@ -17,9 +17,8 @@ void Task::execute()
 
     while (true)
     {
-        // toggleGreen();
-        // system->delay(500);
-        system->sleep();
+        toggleGreen();
+        system->delay(500);
     }
 }
 
