@@ -10,11 +10,11 @@
 
 namespace h7::driver::common
 {
-    static constexpr uint32_t SHARED_ADDRESS = 0x30040000;
-
     struct SharedData 
     {
         unsigned color; 
         bool action;
     };
+
+    extern SharedData __attribute__((section(".shared_ram"))) ledInfo;
 }

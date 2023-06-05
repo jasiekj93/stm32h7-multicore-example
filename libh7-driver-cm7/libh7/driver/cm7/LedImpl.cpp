@@ -5,7 +5,7 @@
 using namespace h7::driver;
 using namespace h7::driver::cm7;
 
-static auto sharedPointer = (common::SharedData*)common::SHARED_ADDRESS;
+common::SharedData common::ledInfo;
 
 LedImpl::LedImpl()
 {
@@ -14,14 +14,14 @@ LedImpl::LedImpl()
 
 void LedImpl::turnOn(Color color)
 {
-    sharedPointer->action = true;
-    sharedPointer->color = (unsigned)color;
+    common::ledInfo.action = true;
+    common::ledInfo.color = (unsigned)color;
     __SEV();
 }
 
 void LedImpl::turnOff(Color color)
 {
-    sharedPointer->action = false;
-    sharedPointer->color = (unsigned)color;
+    common::ledInfo.action = false;
+    common::ledInfo.color = (unsigned)color;
     __SEV();
 }

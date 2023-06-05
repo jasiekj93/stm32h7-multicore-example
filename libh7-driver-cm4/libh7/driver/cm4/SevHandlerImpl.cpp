@@ -10,15 +10,16 @@ using namespace h7::driver::cm4;
 static volatile std::atomic_flag flag;
 static hardware::cm4::Request request;
 static bool isChanged;
-static auto sharedPointer = (common::SharedData*)common::SHARED_ADDRESS;
+
+common::SharedData common::ledInfo;
 
 static void sevCallbackImpl()
 {
     if(std::atomic_flag_test_and_set(&flag))
         return;
 
-    request.color = (hardware::cm4::Request::Color)sharedPointer->color;
-    request.action = sharedPointer->action;
+    request.color = (hardware::cm4::Request::Color)common::ledInfo.color;
+    request.action = common::ledInfo.action;
     isChanged = true;
     std::atomic_flag_clear(&flag);
 }
