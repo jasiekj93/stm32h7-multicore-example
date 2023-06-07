@@ -177,19 +177,12 @@ SECTIONS
     . = ALIGN(8);
   } >RAM_D1
 
-  .shared_ram_block :
+  .shared_ram_block (NOLOAD):
   {
     . = ALIGN(4);
     KEEP(*(.shared_ram))
     . = ALIGN(4);
   } >SHARED_RAM
-
-  .ram_d2_block :
-  {
-    . = ALIGN(4);
-    KEEP(*(.ram_d2))
-    . = ALIGN(4);
-  } >RAM_D2
 
   /* Remove information from the compiler libraries */
   /DISCARD/ :
